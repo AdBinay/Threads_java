@@ -24,14 +24,26 @@ class PrintOdd extends Thread {
     }
 }
 
+class Meow extends Thread {
+    public void run () {
+        System.out.println(" /\\_/\\  ");
+        System.out.println("( o.o ) ");
+        System.out.println(" > ^ <  ");
+        System.out.println("Meow, Meow meow Meow!\n"); 
+    }
+}
+
 public class ThreadPriority {
     public static void main(String[] args) {
         PrintEven pe = new PrintEven();
         PrintOdd po = new PrintOdd();
+        Meow meow = new Meow();
 
-        po.setPriority(1);  // Set priority of PrintOdd thread to MIN_PRIORITY
+        meow.setPriority(1);
+        po.setPriority(2);  // Set priority of PrintOdd thread to MIN_PRIORITY
         pe.setPriority(10); // Set priority of PrintEven thread to MAX_PRIORITY
 
+        meow.start();
         po.start();
         pe.start();
     }
