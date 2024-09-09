@@ -3,7 +3,7 @@ class PrintEven extends Thread {
         for (int i = 0; i <= 50; i = i + 2) {
             System.out.println("Even=" + i + "");
             try {
-                Thread.sleep(1000); // Sleep for 1 second
+                Thread.sleep(100); // Sleep for 1 second
             } catch (InterruptedException e) {
                 System.out.println(e);
             }
@@ -16,7 +16,7 @@ class PrintOdd extends Thread {
         for (int i = 1; i <= 50; i = i + 2) {
             System.out.println("Odd=" + i + "");
             try {
-                Thread.sleep(1000); // Sleep for 1 second
+                Thread.sleep(100); // Sleep for 1 second
             } catch (InterruptedException e) {
                 System.out.println(e);
             }
